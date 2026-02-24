@@ -7,11 +7,11 @@ const routes = require('./routes/user.routes');
 app.use(express.json());
 
 function errorHandler(err,req,res,next){
-    const statusCode = err.statusCode || '500';
+    const statusCode = err.statusCode || 500;
     
     res.status(statusCode).json({
         success: false,
-        message: err.message
+        message: err.message || "Internal Server Error"
     })
 }
 

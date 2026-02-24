@@ -3,12 +3,16 @@ const User = require('../UserModel');
 const mongoose = require('mongoose');
 
 
-async function getAllUsers(req,res){
-    const users = await User.find();
+async function getAllUsers(req,res,next){
+    try {
+        const users = await User.find();
 
-    res.status(200).json({
-        users: users
-    })
+        res.status(200).json({
+            users: users
+        });
+    } catch (err) {
+        next(err);
+    }
 }
 
 async function CreateUser(req,res,next){
@@ -50,7 +54,7 @@ async function UpdateUser(req,res,next){
             throw new Error("User not found associated with this id");
         }
         
-        res.status(201).json({
+        res.status(200).json({
             User: updatedUser
         })
         
@@ -74,7 +78,7 @@ async function DeleteUser(req,res,next){
         if(!deletedUser){
             throw new Error("User not found associated with this id");
         }
-        res.status(201).json({
+        res.status(200).json({
             User: deletedUser
         })
 
