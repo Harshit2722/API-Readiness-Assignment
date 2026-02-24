@@ -20,9 +20,7 @@ function errorHandler(err,req,res,next){
     })
 }
 
-app.get('/',(req,res)=>{
-    res.send("Hello jii");
-})
+
 
 app.use('/api',routes);
 
