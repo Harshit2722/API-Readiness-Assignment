@@ -3,8 +3,12 @@ const User = require('../UserModel');
 const mongoose = require('mongoose');
 
 
-async function getAllUsers(){
-    return await User.find();
+async function getAllUsers(req,res){
+    const users = await User.find();
+
+    res.status(200).json({
+        users: users
+    })
 }
 
 async function CreateUser(req,res,next){
