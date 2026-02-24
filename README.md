@@ -24,7 +24,9 @@ You can test all endpoints directly from the Swagger UI.
 ## Required Environment Variables
 
 PORT
+
 MONGODB_URI
+
 NODE_ENV
 
 ---
@@ -32,6 +34,7 @@ NODE_ENV
 ## Local Setup Instructions
 
 npm install
+
 npm start
 
 ---
