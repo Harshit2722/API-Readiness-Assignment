@@ -4,6 +4,11 @@ const app = express();
 
 const routes = require('./routes/user.routes');
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./swagger');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
 app.use(express.json());
 
 function errorHandler(err,req,res,next){

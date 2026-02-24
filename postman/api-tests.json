@@ -1,0 +1,139 @@
+{
+  "info": {
+    "_postman_id": "3f10e705-75ac-4e93-8546-22e83dca020a",
+    "name": "User CRUD API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52120105",
+    "_collection_link": "https://go.postman.co/collection/52120105-3f10e705-75ac-4e93-8546-22e83dca020a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POST",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"yash\",\r\n    \"email\": \"yash@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PUT",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"yash mittal\",\r\n    \"email\": \"yashmittal12@gmail.com\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/699d633d71777a5217da4954",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "699d633d71777a5217da4954"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"yash mittal\",\r\n    \"email\": \"yashmittal12@gmail.com\"\r\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/699d64b52ff761c8afa9b002",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "699d64b52ff761c8afa9b002"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
