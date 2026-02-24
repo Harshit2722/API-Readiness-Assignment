@@ -79,7 +79,7 @@ async function DeleteUser(req,res,next){
             throw new Error("User not found associated with this id");
         }
         res.status(200).json({
-            User: deletedUser
+            message: "User deleted successfully"
         })
 
     }
